@@ -1,0 +1,34 @@
+.hero-secondary .heading-section{
+    display: flex;
+    justify-content: center;
+    flex-direction:column;
+    align-items:center;
+    padding:2rem;
+    width: 100%;
+    box-sizing: border-box;
+  }
+  .hero-secondary .heading-section p {
+    max-width: 60rem;
+    margin: 1rem auto;
+    color: var(--white);
+    line-height: 2rem;
+  }
+  .hero-secondary {
+    margin: 0;
+    margin-top: 9rem;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    flex-direction:column;    
+    align-items:center;
+    min-height: 30vh;
+   background: var(--black_10);
+   color: var(--black);
+  }
+   
+  .hero-secondary .heading-section h1 {
+    color: var(--black);
+    margin:0;
+    padding:0;
+    text-transform: capitalize;
+  }

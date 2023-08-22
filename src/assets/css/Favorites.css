@@ -1,0 +1,97 @@
+
+/*favorites*/
+.favorites_section{ 
+  width:100%;
+}
+.favorites_section .container{
+    display:flex;
+    flex-direction: column;
+    align-items:start;
+    justify-content:center; 
+    gap:3rem;
+  }
+  .favorites_section .container, .favorites-table{
+    display:flex;
+    flex-direction: column;
+    align-items:center;
+    justify-content: center;
+    gap:1rem;
+   
+  }
+  .favorites-table-title{
+    width:100%;
+    gap:1rem;
+    background: var(--black_10);
+    font-weight: var(--fw-500);
+    color: var(--black);
+    font-size: var(--fs-4);
+  }
+  
+  .favorites-table-data{
+    display:flex;
+    flex-direction: column;
+    align-items:start;
+    justify-content: space-between;
+    width:100%;
+  }
+  
+  .favorites-table-data article{
+    display:grid;
+    gap:1rem;
+    width:100%;
+    border-top: 1px solid var(--light-gray);
+    
+  }
+  
+  
+  @media (min-width:992px) {
+    .favorites-table-data article, .favorites-table-title{
+      grid-template-columns: 4fr 1fr 1fr;
+    }
+    .favorites-table-title{display:grid;}
+  }
+  @media (max-width:991px) {
+    .favorites-table-data article{
+      grid-template-rows: auto;
+    }
+    .favorites-table-title{display:none;}
+  }
+
+  .favorites-table-data article div, .favorites-table-title div{
+    display:flex;
+    flex-direction: row;
+    align-items:center;
+    justify-content: center;
+    padding:2rem;
+  }
+  
+  .favorites-table-data article .article_prod_title{
+    display:flex;
+    flex-direction: column;
+    align-items:center;
+    justify-content: center;
+    gap:1rem;
+    font-weight: var(--fw-500); 
+  }
+  
+ 
+  .favorites-table-data article .article_prod_title img{
+    width:15rem;
+    height: 15rem;  
+    object-fit: cover;
+  }
+  .favorites-table-data article .article_prod_title span:hover{
+    color: var(--color-main);
+  }
+  .favorites-table-data article .article_prod_total{
+    font-weight: var(--fw-500);
+  } 
+     
+  .cart-action{
+    display:flex;
+    flex-direction: row;
+    align-items:center;
+    justify-content: space-between;
+    width:100%;
+    flex-wrap:wrap;
+  }
