@@ -64,7 +64,43 @@ const router = createBrowserRouter([
         element: <Single/>
       },
     ]
-  }  
+  },
+  {
+    path: '/shop', 
+    element: <Shop/>,
+    errorElement: <Error/>,   
+    children:[               
+      {
+        path: 'single/:id', 
+        errorElement: <Error/>,
+        element: <Single/>
+      },
+    ]
+  },
+  {
+    path: '/cart',
+    element: <Cart/>,
+    errorElement: <Error/>,
+    children:[    
+      {
+        path: 'single/:id', 
+        errorElement: <Error/>,
+        element: <Single/>
+      },
+    ]
+  },
+  {
+    path: '/favorites',
+    element: <Favorites/>,
+    errorElement: <Error/>,
+    children:[    
+      {
+        path: 'single/:id', 
+        errorElement: <Error/>,
+        element: <Single/>
+      }
+    ]
+  },  
   
 ]);
 
