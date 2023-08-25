@@ -21,7 +21,7 @@
     justify-content: center;
     flex-direction:column;    
     align-items:center;
-    height: 25vh;
+    min-height: 25vh;
     background: var(--black_10);
     color: var(--black);
   }
