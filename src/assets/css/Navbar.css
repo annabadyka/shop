@@ -13,49 +13,64 @@
  
 .header .container{
     display:flex;
-    justify-content: space-between;
     align-items:center;
     flex-wrap:wrap;
     flex-direction: row;
-    gap:1rem;   
+    justify-content: end;
+    gap:.5rem; 
 }
- 
-@media (max-width: 767px) {
+
+
+@media (min-width:357px) and (max-width:767px) {
     .header .container{
-        justify-content: end;
+        justify-content: space-between;
+    }
+  }
+@media (min-width: 768px) {
+    .header .container{
+        justify-content: space-between;
+    }
+  }
+
+@media (min-width: 768px) {
+    .header .container{
+        justify-content: space-between;
+        gap:3rem;   
     }
   }
 
 .logo{
-    font-size: var(--fs-1);
     font-weight: var(--fw-500);    
     font-family: var(--ff-cursive);
-    line-height: var(--fs-1); 
+    font-size: var(--fs-3);
 }
 
-@media (max-width:575px) {
+@media (min-width:576px) and (max-width:767px) {
+    .logo{
+      font-size: var(--fs-2);
+    }
+  }
+  
+@media (min-width:768px) {
   .logo{
-    font-size: var(--fs-2);
+        font-size: var(--fs-1);
   }
 }
+
 
 .header-action{
     display:flex;
     gap:1rem; 
     flex-wrap:wrap;
-    justify-content: space-between;
+    justify-content: end;
+    align-items:center;
 }
-
-@media (max-width: 767px) {
-    .header-action{
-        justify-content: end;
-    }
-  }
-  
-
 .header-action-btn{
     position:relative;
-    transition: var(--transition-1); 
+    transition: var(--transition-1);
+    display:flex;
+    align-items:center;
+    justify-content: center; 
 }
 .header-action-btn:hover, .header-action-btn:focus{color: var(--color-main);}
 
@@ -64,15 +79,14 @@
     color:var(--white);
     font-weight: var(--fw-500);
     position:absolute;
-    bottom: -10px; 
-    right:-10px;
-    width: 30px;
-    height:30px;
+    bottom: -5px; 
+    right:-5px;
+    width: 25px;
+    height:25px;
     display:flex;
     align-items:center;
     justify-content: center;
     border-radius:50%;
-    font-size:var(--fs-5);
 }
 
 .user-login-btns{
@@ -81,22 +95,28 @@
     justify-content: center;
     flex-direction:row;
     gap:1rem;    
-    font-size:var(--fs-5);
 }
 
 
+@media (min-width:576px) {
+    .header-action-btn .btn-badge, .user-login-btns{
+    font-size: var(--fs-6);
+  }
+}
+
 @media (max-width:575px) {
-    .user-login-btns{      
-        font-size:var(--fs-6);
-    }
+    .header-action-btn .btn-badge, .user-login-btns{
+    font-size: 1rem;
+  }
 }
 
 .header-action-btn_right{
     display:flex;
-    align-items:start;
+    align-items:center;
     justify-content: center;
     flex-direction:row;
-    gap:1rem;    
+    gap:1rem;  
+    flex-wrap:no-wrap;  
 }
 
 .sidebar{

@@ -15,22 +15,23 @@
   }
   .hero-secondary {
     margin: 0;
-    padding-top: 8rem;
+    padding-top: 10rem;
     width: 100%;
     display: flex;
     justify-content: center;
     flex-direction:column;    
     align-items:center;
-    min-height: 30vh;
-   background: var(--black_10);
-   color: var(--black);
+    height: 25vh;
+    background: var(--black_10);
+    color: var(--black);
   }
 
-  @media (max-width: 767px) {
-    .hero-secondary{
+  @media (min-width:767px) {
+    .hero-secondary {
       padding-top: 15rem;
-    }
   }
+}
+
   .hero-secondary .heading-section h1 {
     color: var(--black);
     margin:0;
