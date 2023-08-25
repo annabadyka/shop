@@ -58,7 +58,6 @@ html {
   overflow: hidden;
   overflow-y: scroll;
   font-size: 12px;
-  width: 100vw;
   height: 100vh;
 }
 html ::selection {
@@ -73,7 +72,6 @@ body {
   line-height: 1.7;
   margin:0;
   padding:0;
-  width: 100vw;
   height: 100vh; 
 }
  
@@ -138,7 +136,7 @@ body {
   font-weight:var(--fw-500);
 }
 
-@media (max-width: 767px) {
+@media (max-width: 575px) {
   .heading-section h1{
     font-size: var(--fs-2);
   }

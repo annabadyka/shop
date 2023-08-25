@@ -67,7 +67,7 @@ const Single= ()=> {
             </form>  
             </div>
             <div className="single-product_detail">
-                <SingleImages images={single_product.images}/>              
+                <SingleImages images={single_product.images} title={single_product.name}/>              
                 <div className="single-info">
                     <SingleReviews stars={single_product.stars} reviews={single_product.reviews}/>                
                 <div className="single_cont_data1">                   

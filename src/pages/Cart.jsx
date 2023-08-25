@@ -6,7 +6,6 @@ import { formatPrice } from '../utils';
 import { useDispatch, useSelector } from 'react-redux'; 
 import { Link } from 'react-router-dom';
 import { clearCart} from '../store/cartSlice';
-import { toast } from 'react-toastify';
 import { ScrollRestoration } from 'react-router-dom';
 
 const Cart = ()=> {
@@ -79,7 +78,7 @@ const Cart = ()=> {
                     </div>
                 </div>
                 <div className='btn_cont'>
-                   <button className='btn' onClick={()=>{toast.success('No login yet');}}>Login</button>
+                   <button className='btn'>Buy</button>
                 </div>
             </div>
             </div>

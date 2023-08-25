@@ -18,27 +18,30 @@ const Navbar = ()=> {
                     Furnitux
                 </Link>
                 <div className='header-action'>
-                    <button className='header-action-btn'>
-                        <i className='ti-user'><TfiUser /></i>                        
+                    <button className='header-action-btn user-login-btns'>
+                        <i className='ti-user'><TfiUser /></i>  
+                        <span>Hello, Test</span>                       
                     </button>
-                    <button className='header-action-btn'>                        
-                        <NavLink to={'/cart'} className={
-                        ({ isActive}) => isActive ?  'active' : ''}                        
-                        ><i className='ti-shopping-cart'><TfiShoppingCart/></i>                        
-                        <span className='btn-badge'>{total_items}</span>
-                        </NavLink> 
-                    </button>
-                    <button className='header-action-btn'>                        
-                        <NavLink to={'/favorites'} className={
-                        ({ isActive}) => isActive ?  'active' : ''}                        
-                        ><i className='ti-favorites'><TfiHeart/></i>                        
-                        <span className='btn-badge'>{total_favorites}</span>
-                        </NavLink> 
-                    </button>
-                    <button
-                        className='header-action-btn'>
-                        <i className='ti-menu' onClick={()=>setSidebarOpen(!isSidebarOpen)}><TfiMenu /></i>
-                    </button>
+                    <div className='header-action-btn_right'>
+                        <button className='header-action-btn'>                        
+                            <NavLink to={'/cart'} className={
+                            ({ isActive}) => isActive ?  'active' : ''}                        
+                            ><i className='ti-shopping-cart'><TfiShoppingCart/></i>                        
+                            <span className='btn-badge'>{total_items}</span>
+                            </NavLink> 
+                        </button>
+                        <button className='header-action-btn'>                        
+                            <NavLink to={'/favorites'} className={
+                            ({ isActive}) => isActive ?  'active' : ''}                        
+                            ><i className='ti-favorites'><TfiHeart/></i>                        
+                            <span className='btn-badge'>{total_favorites}</span>
+                            </NavLink> 
+                        </button>
+                        <button
+                            className='header-action-btn'>
+                            <i className='ti-menu' onClick={()=>setSidebarOpen(!isSidebarOpen)}><TfiMenu /></i>
+                        </button>
+                    </div>                   
                 </div>
             </div>
         </header>
