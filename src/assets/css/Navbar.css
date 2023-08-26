@@ -1,7 +1,5 @@
 
 /*Navbar*/
-/*.header .input-wrapper{display:none;}*/
-
 .header{
     position:fixed;
     border-bottom: 1px solid var(--light-gray);
@@ -18,8 +16,8 @@
     flex-direction: row;
     justify-content: end;
     gap:.5rem; 
+    padding: 1% 10%;
 }
-
 
 @media (min-width:357px) and (max-width:767px) {
     .header .container{
@@ -155,6 +153,7 @@ i:hover{ color: var(--color-main);}
     flex-direction: column;
     padding: 5%;
 }
+
 .navbar ul, .social ul{
     display:flex;
     align-items: flex-start;
