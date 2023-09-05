@@ -144,13 +144,21 @@ export default productsSlice.reducer;
 
 
 export const getAllProducts = createAsyncThunk('products', async () => {
-    const response =  await axios.get(productsApiUrl);
-    const products = response.data;
-    return products; 
+    try{
+        const response =  await axios.get(productsApiUrl);
+        const products = response.data;
+        return products; 
+    }catch(err){
+        return err.msg; 
+    }    
 });
 
 export const getSingleProduct = createAsyncThunk('singleProduct', async (nid_product) => {
-    const response =  await axios.get(`${singleProductApiUrl}${nid_product}`);
-    const product = response.data;
-    return product; 
+    try{
+        const response =  await axios.get(`${singleProductApiUrl}${nid_product}`);
+        const product = response.data;
+        return product; 
+    }catch(err){
+       return err.msg; 
+    }    
 });
